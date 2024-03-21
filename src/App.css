@@ -17,6 +17,10 @@ body {
   margin-left: 10px;
 }
 
+#menuToggle:hover{
+  color: #ad88c6;
+}
+
 #menuToggle input {
   display: none;
 }
@@ -31,6 +35,10 @@ body {
   transform-origin: 4px 0px;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
     background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:hover{
+  color: #ad88c6;
 }
 
 #menuToggle input:checked ~ span {
@@ -65,8 +73,7 @@ body {
 
 .alink {
   text-decoration: none;
-  color: #333333;
-  border-bottom: 2px solid #dee2e6;
+  color: #222831;
 }
 
 .no-click {
@@ -80,6 +87,7 @@ body {
   color: #222831;
   z-index: 10;
   font-size: 15px;
+  cursor: default;
 }
 
 .close-button {
@@ -154,7 +162,7 @@ body {
   display: block;
 }
 .container .wrap a:hover {
-  color: 333333;
+  color: white;
   background-color: #ad88c6;
 }
 .swipe:before {
