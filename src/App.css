@@ -17,7 +17,7 @@ body {
   margin-left: 10px;
 }
 
-#menuToggle:hover{
+#menuToggle:hover {
   color: #ad88c6;
 }
 
@@ -37,7 +37,7 @@ body {
     background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
 
-#menuToggle span:hover{
+#menuToggle span:hover {
   color: #ad88c6;
 }
 
@@ -193,6 +193,15 @@ body {
 
 .map-margin {
   margin-left: 200px;
+}
+
+.error-message {
+  background-color: #ffcccc; /* Light red background */
+  color: #ff0000; /* Red text color */
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ff0000; /* Red border */
 }
 
 /*mobile screen css*/

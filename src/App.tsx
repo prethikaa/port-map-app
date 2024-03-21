@@ -18,7 +18,7 @@ const App: React.FC = () => {
     zoom: 2,
   }); // stores map center and zoom level and set to default value
   const [listClickable, setListClickable] = useState<boolean>(true); // controls whether ports in the list are clickable
-
+  const [error, setError] = useState<string | null>(null); // state to store error message
   // useEffect hook to fetch port data from the api when component mounts
   useEffect(() => {
     const fetchPorts = async () => {
@@ -26,6 +26,7 @@ const App: React.FC = () => {
         const response = await axios.get("http://localhost:4000/fetchPorts");
         setPorts(response.data);
       } catch (error: any) {
+        setError("Error fetching ports. Please try again later.");
         console.error("Error fetching ports:", error.message);
       }
     };
@@ -84,6 +85,7 @@ const App: React.FC = () => {
         listmenuOpen={listmenuOpen}
         toggleMenu={toggleMenu}
       />
+      {error && <div className="error-message">{error}</div>}
       {/* Render MapComponent */}
       <MapComponent
         ports={ports}
