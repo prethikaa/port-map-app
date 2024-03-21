@@ -16,6 +16,7 @@ interface MapComponentProps {
     center: { lat: number; lng: number };
     zoom: number;
   };
+  
 }
 
 // MapComponent
