@@ -49,4 +49,4 @@ This project is a web application built using React and Typescript that allows u
 
 ## Additional Notes
 
-- Adjust Google Maps API key and any other configurations as needed.
+- Adjust Google Maps API key in index.html file(scripts section) and any other configurations if needed.
