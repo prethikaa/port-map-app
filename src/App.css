@@ -1,38 +1,204 @@
-.App {
-  text-align: center;
+body {
+  background-color: #ffe6e6;
+  margin: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
+/* Port List menu css */
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  user-select: none;
+  cursor: pointer;
+  color: #ffe6e6;
+  margin-top: 0px;
+  margin-left: 10px;
+}
+
+#menuToggle input {
+  display: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 23px;
+  height: 4px;
+  margin-bottom: 5px;
+  background: #ffecec;
+  border-radius: 3px;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #ffecec;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  width: 200px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 100px;
+  list-style-type: none;
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 19px;
+  text-decoration: none;
+}
+
+.alink {
+  text-decoration: none;
+  color: #333333;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.no-click {
   pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Popup css*/
+.modal-p {
+  color: #222831;
+  z-index: 10;
+  font-size: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.close-button {
+  color: #180a0a;
+  z-index: 10;
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 80px;
+}
+
+.close-button:hover {
+  color: #ffecec;
+}
+
+.box {
+  width: 200px;
+  height: 120px;
+  border-radius: 5px;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  right: 0px;
+  transform: translateX(-50%);
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+.box::before {
+  content: "";
+  background-image: conic-gradient(#7fb77e 20deg, transparent 120deg);
+  width: 190%;
+  height: 280%;
+  position: absolute;
+  animation: rotate 4s linear infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
+.box::after {
+  content: "";
+  width: 95%;
+  height: 90%;
+  background: #ad88c6;
+  position: absolute;
+  border-radius: 5px;
+}
+
+@keyframes rotate {
+  0% {
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/*Port List transition css*/
+.transition,
+.transition :before,
+.transition :after {
+  transition: 0.5s ease-in-out;
+}
+
+.container {
+  width: 100%;
+}
+.container .wrap a {
+  position: relative;
+  display: block;
+}
+.container .wrap a:hover {
+  color: 333333;
+  background-color: #ad88c6;
+}
+.swipe:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #7469b6;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.swipe.clicked:before {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.purple-transition:before {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.purple-transition:before {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.map-margin {
+  margin-left: 200px;
+}
+
+/*mobile screen css*/
+@media only screen and (max-width: 768px) {
+  #menu {
+    width: 100px;
+  }
+  #menu li {
+    font-size: 15px;
+  }
+  .map-margin {
+    margin-left: 120px;
+  }
+  .box {
+    left: 130px;
   }
 }

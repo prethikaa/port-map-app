@@ -1,46 +1,52 @@
-# Getting Started with Create React App
+# Port Map App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a web application built using React and Typescript that allows users to explore various ports around the world. It utilizes Google Maps API to display the ports on a map and provides information about each port when clicked.
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+1. Clone the repository: `git clone <repository_url>`
+2. Navigate to the project directory: `cd port-map-app`
+3. Install dependencies: `npm install`
 
-### `npm start`
+## Set Up 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Open a new terminal window and navigate to the project directory:`cd port-map-app`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. Start the development environment:`npm run dev`
+**Note:** Please wait for 5 minutes if any error is shown as it will automatically start its setup in some time.
 
-### `npm test`
+3. Open your web browser and navigate to `http://localhost:3000`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Explore the ports on the map or use the port list for navigation.
+- Click on a port marker or list item to view detailed information about the port.
+- Toggle the menu to hide or show the port list.
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Map View**: Displays ports on a Google Map and zooms/highlight if clicked on marker.
+- **Port List**: Provides a list of ports for easy navigation and zooms/highlight if clicked on port list.
+- **Port Information**: Clicking on a port marker or list item displays detailed information about the port, including its name, location, anchorage depth, and entrance restrictions.
+- **Menu Toggle**: Allows users to toggle the visibility of the port list.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **React**: JavaScript library for building user interfaces.
+- **TypeScript**: Superset of JavaScript that adds static type-checking capabilities.
+- **Google Maps API**: Integration for displaying maps and markers.
+- **Axios**: Promise-based HTTP client for making requests.
+- **Express**: Web application framework for building APIs.
+- **CORS**: Middleware for enabling Cross-Origin Resource Sharing.
+- **CSS**: Styling the application components.
 
-### `npm run eject`
+## Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- **src/**
+  - **App.tsx**: Main component for rendering the application.
+  - **PortList.tsx**: Component for rendering the list of ports.
+  - **Map.tsx**: Component for rendering the Google Map and markers.
+  - **server.mjs**: Express server for proxying requests to fetch port data.
+  - **App.css**: Stylesheet for the application.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Additional Notes
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Adjust Google Maps API key and any other configurations as needed.
