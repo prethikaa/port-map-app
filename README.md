@@ -5,12 +5,12 @@ This project is a web application built using React and Typescript that allows u
 ## Installation
 
 1. Clone the repository: `git clone https://github.com/prethikaa/port-map-app.git`
-2. Navigate to the project directory: `cd port-map-app`
+2. Navigate to the project root directory
 3. Install dependencies: `npm install`
 
 ## Set Up
 
-1. Open a new terminal window and navigate to the project directory:`cd port-map-app`
+1. Open a new terminal window and navigate to the project root directory
 
 2. Start the development environment:`npm run dev`
    **Note:** Please wait for 5 minutes if any error is shown as it will automatically start its setup in some time.
